@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Eefgilm::VERSION
   spec.authors       = ["Erik Nilsen"]
   spec.email         = ["enilsen16@live.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
+  spec.summary       = %q{A gem to keep your Gemfile in best practice .}
   spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
