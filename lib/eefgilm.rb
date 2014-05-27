@@ -1,5 +1,8 @@
 require "eefgilm/version"
+require "eefgilm/content"
+
 
 module Eefgilm
-  # Your code goes here...
+
 end
+
