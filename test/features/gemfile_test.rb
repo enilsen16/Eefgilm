@@ -8,12 +8,9 @@ require "eefgilm"
     source = "source 'https://rubygems.org'"
     contentarray.first.chomp.must_equal source
   end
-  it "checks to see if a gemfile is present" do
-    gemfile = File.exist?(File.join(File.dirname(__FILE__), "../data/default_gemfile/Gemfile"))
-    gemfile.must_equal true
-  end
-  it "does not have a gemfile" do
-    gemfile = File.exist?(File.join(File.dirname(__FILE__), "../data/no_gemfile/Gemfile"))
-    gemfile.must_equal false
+
+  it "will raise an exception if methods are called without a specified Gemfile" do
+    gemfile = Eefgilm::Gemfile.new("../data/no_gemfile")
+    proc { gemfile.read }.must_raise(Errno::ENOENT)
   end
 end
