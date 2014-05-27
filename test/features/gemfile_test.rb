@@ -12,9 +12,8 @@ require "eefgilm"
     gemfile = File.exist?(File.join(File.dirname(__FILE__), "../data/default_gemfile/Gemfile"))
     gemfile.must_equal true
   end
-  # it "does not have a gemfile" do
-  #   gemfile = Eefgilm::Gemfile.new(no_gemfile)
-  #   check = gemfile.exists?
-  #   check.must_equal false
-  # end
+  it "does not have a gemfile" do
+    gemfile = File.exist?(File.join(File.dirname(__FILE__), "../data/no_gemfile/Gemfile"))
+    gemfile.must_equal false
+  end
 end
