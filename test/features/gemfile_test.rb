@@ -1,7 +1,7 @@
 require "minitest/autorun"
 require "eefgilm"
 
- describe "Gemfile" do
+describe "Gemfile" do
   it "The Gemfile can be read correctly" do
     gemfile = Eefgilm::Gemfile.new
     contentarray= gemfile.read

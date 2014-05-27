@@ -7,9 +7,11 @@ module Eefgilm
     end
 
     def read
-     gemfile = File.open("#{@path}/Gemfile", "r")
-     file = gemfile.readlines
-     return file
-    end
+     gemfile = File.open("#{@path}/Gemfile", "r+")
+     @file = gemfile.readlines
+   end
+
+  #  def comment_removal
+  #   @file.
   end
 end
