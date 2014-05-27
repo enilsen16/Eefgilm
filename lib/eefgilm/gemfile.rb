@@ -7,7 +7,7 @@ module Eefgilm
     end
 
     def read
-     gemfile = File.open("#{@path}Gemfile", "r")
+     gemfile = File.open("#{@path}/Gemfile", "r")
      file = gemfile.readlines
      return file
     end

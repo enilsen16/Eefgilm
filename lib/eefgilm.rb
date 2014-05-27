@@ -1,5 +1,5 @@
 require "eefgilm/version"
-require "eefgilm/content"
+require "eefgilm/gemfile"
 
 
 module Eefgilm
