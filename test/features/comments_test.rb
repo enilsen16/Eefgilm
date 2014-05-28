@@ -5,11 +5,13 @@ require "pry-nav"
 
 describe "Comment processing" do
   before do
-    FileUtils.copy "test/data/sources/original/railsgem", "test/data/sources/dummy/Gemfile"
+    @file = "test/data/sources/dummy/Gemfile"
+    FileUtils.copy "test/data/sources/original/railsgem", @file
     @gemfile = Eefgilm::Gemfile.new
   end
 
   it "must remove a files comments" do
-    @gemfile.comment_removal.wont_match "/#/"
+    @gemfile.remove_comments!
+    File.read(@file) {|f| f.read }.wont_match /#/
   end
 end
