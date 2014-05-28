@@ -1,28 +1,37 @@
 module Eefgilm
   class Gemfile
-    attr_accessor :path, :lines
+    attr_accessor :path, :lines, :source, :group
 
-    def initialize(path= "./")
-      @path = path
+    def initialize(path = ".")
+      @path  = path
+      @lines = []
     end
 
     def extract_to_array_of_lines
       gemfile = File.open("#{@path}/Gemfile", "r+")
-      @lines = gemfile.readlines
+
+      file_lines = gemfile.readlines
+      file_lines.each do |line|
+        self.source = line if line.match(/^source/)
+        group       = line.match(//) if line.match(/^\s*group/)
+        self.lines << line if line.match(/^\s*gem/)
+      end
     end
 
-    def remove_comments!
-      # #extract
+    def clean!
+      # Extract:
       extract_to_array_of_lines
 
-      # #transform
-      delete_comments
+      # Transform:
+      delete_comments!
+      # delete_whitespace!
+      alphabetize_gems!
 
-      # #load
+      # Load:
       recreate_file
     end
 
-    def delete_comments
+    def delete_comments!
       @lines.each do |string|
         string.gsub!(/#(.*)$/, "")
       end
@@ -36,6 +45,10 @@ module Eefgilm
         end
       end
       output.close
+    end
+
+    def alphabetize_gems!
+      @lines.sort!
     end
   end
 end
