@@ -11,7 +11,7 @@ describe "Comment processing" do
   end
 
   it "must remove a files comments" do
-    @worker.remove_comments!
+    @worker.clean!
     File.read(@file) {|f| f.read }.wont_match /#(.*)$/
   end
 end
