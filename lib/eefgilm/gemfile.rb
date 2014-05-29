@@ -1,3 +1,6 @@
+require "pry"
+require "pry-nav"
+
 module Eefgilm
   class Gemfile
     attr_accessor :path, :lines, :source, :group
@@ -39,6 +42,7 @@ module Eefgilm
 
     def recreate_file
       output = File.open( "#{@path}/Gemfile", "w+" )
+      output << @source + "\n"
       @lines.each do |line|
         unless line.empty?
           output << line
@@ -53,7 +57,7 @@ module Eefgilm
 
     def delete_whitespace!
       @lines.each do |line|
-        line.gsub!(/(?<=^|\[)\s+|\s+(?=$|\])|(?<=\s)\s+/, "")
+        line.gsub!(/(?<=^|\[)\s+|\s+(?=$|\])|(?<=\s)\s+/, "\n")
       end
     end
   end
