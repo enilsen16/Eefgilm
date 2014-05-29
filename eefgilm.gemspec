@@ -6,8 +6,8 @@ require 'eefgilm/version'
 Gem::Specification.new do |spec|
   spec.name          = "eefgilm"
   spec.version       = Eefgilm::VERSION
-  spec.authors       = ["Erik Nilsen"]
-  spec.email         = ["enilsen16@live.com"]
+  spec.authors       = ["Erik Nilsen", "Marco Lindsay"]
+  spec.email         = ["enilsen16@live.com", "lindsay_marco@hotmail.com"]
   spec.summary       = %q{A gem to keep your Gemfile in best practice .}
   spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
