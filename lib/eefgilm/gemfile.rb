@@ -24,7 +24,7 @@ module Eefgilm
 
       # Transform:
       delete_comments!
-      #delete_whitespace!
+      delete_whitespace!
       alphabetize_gems!
 
       # Load:
@@ -49,6 +49,12 @@ module Eefgilm
 
     def alphabetize_gems!
       @lines.sort!
+    end
+
+    def delete_whitespace!
+      @lines.each do |line|
+        line.gsub!(/(?<=^|\[)\s+|\s+(?=$|\])|(?<=\s)\s+/, "")
+      end
     end
   end
 end

@@ -7,9 +7,8 @@ describe "Whitespace removal" do
     FileUtils.copy "test/data/sources/original/railsgem", @file
     @worker = Eefgilm::Gemfile.new("test/data/sources/dummy")
   end
-  it "should remove empty lines with new line character" do
-    @worker.delete_whitespace!
-    @worker.wont_match /^\n/
+  it "should remove unnecessary whitespace" do
+    @worker.clean!
+   File.read(@file) {|f| f.read }.wont_match /(?<=^|\[)\s+|\s+(?=$|\])|(?<=\s)\s+/
   end
 end
-
