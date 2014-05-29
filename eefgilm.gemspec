@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Erik Nilsen"]
   spec.email         = ["enilsen16@live.com"]
   spec.summary       = %q{A gem to keep your Gemfile in best practice .}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.description   = %q{Eefgilm is a gem that is written to help keep your gemfile in order. It will alphabetize your gems, remove comments, and remove unnecessary whitespace.  }
   spec.homepage      = ""
   spec.license       = "MIT"
 
