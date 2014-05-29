@@ -24,7 +24,7 @@ module Eefgilm
 
       # Transform:
       delete_comments!
-      # delete_whitespace!
+      #delete_whitespace!
       alphabetize_gems!
 
       # Load:
