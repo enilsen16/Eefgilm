@@ -1,14 +1,31 @@
-require "pry"
-require "pry-nav"
-
 module Eefgilm
   class Gemfile
     attr_accessor :path, :lines, :source, :group
 
-    def initialize(path = ".")
+    def initialize(path = ".", options = {})
       @path  = path
       @lines = []
+      @options = {
+        :alphabetize => true,
+        :delete_whitespace => true,
+        :delete_comments => true
+      }.merge(options)
     end
+
+    def clean!
+      # Extract:
+      extract_to_array_of_lines
+
+      # Transform:
+      delete_comments! if @options[:delete_comments]
+      delete_whitespace! if @options[:delete_whitespace]
+      alphabetize_gems! if @options[:alphabetize]
+
+      # Load:
+      recreate_file
+    end
+
+    private
 
     def extract_to_array_of_lines
       gemfile = File.open("#{@path}/Gemfile", "r+")
@@ -21,19 +38,6 @@ module Eefgilm
       end
     end
 
-    def clean!
-      # Extract:
-      extract_to_array_of_lines
-
-      # Transform:
-      delete_comments!
-      delete_whitespace!
-      alphabetize_gems!
-
-      # Load:
-      recreate_file
-    end
-
     def delete_comments!
       @lines.each do |string|
         string.gsub!(/#(.*)$/, "")
@@ -42,12 +46,15 @@ module Eefgilm
 
     def recreate_file
       output = File.open( "#{@path}/Gemfile", "w+" )
-      output << @source + "\n"
+      output.puts @source
+      output.puts
+
       @lines.each do |line|
         unless line.empty?
-          output << line
+          output.puts line
         end
       end
+
       output.close
     end
 
@@ -57,9 +64,8 @@ module Eefgilm
 
     def delete_whitespace!
       @lines.each do |line|
-        line.gsub!(/(?<=^|\[)\s+|\s+(?=$|\])|(?<=\s)\s+/, "\n")
+        line.gsub!(/(?<=^|\[)\s+|\s+(?=$|\])|(?<=\s)\s+/, "")
       end
     end
   end
 end
-
