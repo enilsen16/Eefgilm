@@ -1,10 +1,10 @@
 module Eefgilm
   class Gemfile
-    attr_accessor :path, :lines, :source, :group
+    attr_accessor :path, :source, :groups
 
     def initialize(path = ".", options = {})
       @path  = path
-      @lines = []
+      @groups ={}
       @options = {
         :alphabetize => true,
         :delete_whitespace => true,
@@ -30,24 +30,41 @@ module Eefgilm
 
     def extract_to_array_of_lines
       gemfile = File.open("#{@path}/Gemfile", "r+")
-
+      group_block = :all
       file_lines = gemfile.readlines
+
       file_lines.each do |line|
         self.source = line if line.match(/^source/)
-        group       = line.match(//) if line.match(/^\s*group/)
-        self.lines << line if line.match(/^\s*gem/)
+
+        if line.match(/^\s*group/)
+          group_block = line.match(/^group (:.*)[,|\s]/)[1]
+        elsif line.match(/^\s*end/)
+          group_block = :all
+        end
+
+        if line.match(/^\s*gem/)
+          if self.groups[group_block].nil?
+            self.groups[group_block] = [line]
+          else
+            self.groups[group_block] << line
+          end
+        end
       end
     end
 
     def change_double_qoutes_to_single
-      @lines.each do |line|
-        line.gsub!('"',"'")
+      @groups.each do |group, gems|
+        @groups[group] = gems.map do |g|
+          g.gsub('"',"'")
+        end
       end
     end
 
     def delete_comments!
-      @lines.each do |string|
-        string.gsub!(/#(.*)$/, "")
+      @groups.each do |group, gems|
+        @groups[group] = gems.map do |g|
+          g.gsub(/#(.*)$/, "")
+        end
       end
     end
 
@@ -56,9 +73,19 @@ module Eefgilm
       output.puts @source
       output.puts
 
-      @lines.each do |line|
-        unless line.empty?
-          output.puts line
+      @groups.each do |group, gems|
+        if group == :all
+          gems.each do |g|
+            output.puts g
+          end
+        else
+          output.puts
+          output.puts "group #{group}"
+
+          gems.each do |g|
+            output.puts "  #{g}"
+          end
+          output.puts "end"
         end
       end
 
@@ -66,12 +93,16 @@ module Eefgilm
     end
 
     def alphabetize_gems!
-      @lines.sort!
+      @groups.each do |group, gems|
+        @groups[group] = gems.sort
+      end
     end
 
     def delete_whitespace!
-      @lines.each do |line|
-        line.gsub!(/(?<=^|\[)\s+|\s+(?=$|\])|(?<=\s)\s+/, "")
+      @groups.each do |group, gems|
+        @groups[group] = gems.map do |g|
+          g.gsub(/(?<=^|\[)\s+|\s+(?=$|\])|(?<=\s)\s+/, "")
+        end
       end
     end
   end
