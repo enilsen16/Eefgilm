@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/eefgilm@2x.png)](http://badge.fury.io/rb/eefgilm)
+[![Gem Version](https://badge.fury.io/rb/eefgilm.svg)](http://badge.fury.io/rb/eefgilm)
 [![Stories in Ready](https://badge.waffle.io/enilsen16/eefgilm.png?label=ready&title=Ready)](https://waffle.io/enilsen16/eefgilm)
 #Eefgilm: A gem for cleaning up your Gemfile
 
