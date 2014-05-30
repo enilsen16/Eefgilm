@@ -3,26 +3,21 @@
 #Eefgilm: A gem for cleaning up your Gemfile
 
 #Description:
-This gem automatically sorts the Gemfile alphabetically and removes comments, per Best Practice. Grouped gems are only sorted within their group.
+Important, currently does not support gem groups. If you have groups they will not included in the revised gemfile! This gem automatically sorts the Gemfile alphabetically and removes comments, per Best Practice. Grouped gems are only sorted within their group.
 
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Run this command:
 
-    gem 'eefgilm'
+    gem install eefgilm
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install eefgilm
 
 ## Usage
 
-TODO: Write usage instructions here
+In the directory who's gemfile you would like to improve run:
+
+    eefglim
 
 ## Contributing
 
