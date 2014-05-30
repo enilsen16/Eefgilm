@@ -57,7 +57,7 @@ If you find a bug or have a suggestion, please create a new issue and we will lo
 ---
 
 ##Thanks
-The following people have helped with development or project design in one form or another:
+The following people have helped with development or project design in one form or another:  
 [Steve Buckley](https://github.com/buckleys78)  
 [Brook Riggio](https://github.com/brookr)  
 [Cheri](https://github.com/cherimarie)  
