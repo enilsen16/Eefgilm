@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'eefgilm/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "Eefgilm"
+  spec.name          = "eefgilm"
   spec.version       = Eefgilm::VERSION
   spec.authors       = ["Erik Nilsen", "Marco Lindsay"]
   spec.email         = ["enilsen16@live.com", "lindsay_marco@hotmail.com"]
