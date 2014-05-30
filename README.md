@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/enilsen16/Eefgilm.svg?branch=master)](https://travis-ci.org/enilsen16/Eefgilm)
 [![Gem Version](https://badge.fury.io/rb/eefgilm.svg)](http://badge.fury.io/rb/eefgilm)
 [![Stories in Ready](https://badge.waffle.io/enilsen16/eefgilm.png?label=ready&title=Ready)](https://waffle.io/enilsen16/eefgilm)
 #Eefgilm: A gem for cleaning up your Gemfile
