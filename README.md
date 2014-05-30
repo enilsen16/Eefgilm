@@ -46,8 +46,13 @@ We welcome contributions! If you want to help out you have many options:
 5. Create a new Pull Request
 
 ---
-##Contact
+##Issues
 If you find a bug or have a suggestion, please create a new issue and we will look into it. Thank You. [Create a new issue](https://github.com/enilsen16/Eefgilm/issues/new)
+
+---
+##Contact
+
+
 ---
 
 ##Thanks
