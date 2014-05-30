@@ -17,6 +17,7 @@ module Eefgilm
       extract_to_array_of_lines
 
       # Transform:
+      change_double_qoutes_to_single if @options[:alphabetize]
       delete_comments! if @options[:delete_comments]
       delete_whitespace! if @options[:delete_whitespace]
       alphabetize_gems! if @options[:alphabetize]
@@ -35,6 +36,12 @@ module Eefgilm
         self.source = line if line.match(/^source/)
         group       = line.match(//) if line.match(/^\s*group/)
         self.lines << line if line.match(/^\s*gem/)
+      end
+    end
+
+    def change_double_qoutes_to_single
+      @lines.each do |line|
+        line.gsub!('"',"'")
       end
     end
 
