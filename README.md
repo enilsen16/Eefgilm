@@ -4,7 +4,7 @@
 #Eefgilm: A gem for cleaning up your Gemfile
 
 #Description:
-**Important, currently does not support gem groups. If you have groups they will not included in the revised gemfile!**
+**Important, currently does not support group blocks. If you have groups they will not included in the revised gemfile!**
 
 This gem automatically modifies a ruby gemfile to make them a little easier to read, it does this by alphabetizing the gems, removing all comments, and removing all whitespace including leading and trailing.
 
@@ -47,16 +47,15 @@ We welcome contributions! If you want to help out you have many options:
 
 ---
 ##Contact
-If you find a bug have a suggestion or just want to say hi please feel free to contact Marco <lindsay_marco@hotmail.com>
-
+If you find a bug or have a suggestion, please create a new issue and we will look into it. Thank You. [Create a new issue](https://github.com/enilsen16/Eefgilm/issues/new)
 ---
 
 ##Thanks
 The following people have helped with development or project design in one form or another:
-[https://github.com/buckleys78](https://github.com/buckleys78)
-[https://github.com/brookr](https://github.com/brookr)
-[https://github.com/cherimarie](https://github.com/cherimarie)
-[https://github.com/dbalatero](https://github.com/dbalatero)
+[Steve Buckley](https://github.com/buckleys78)
+[Brook Riggio](https://github.com/brookr)
+[Cheri](https://github.com/cherimarie)
+[David](https://github.com/dbalatero)
 
 ---
 ##License
