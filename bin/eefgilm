@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
-require 'eefgilm'
-gemfile = Eefgilm::Gemfile.new
-gemfile.clean!
+# require 'eefgilm'
+# gemfile = Eefgilm::Gemfile.new
+# gemfile.clean!
+puts "hello world!"
 
 
