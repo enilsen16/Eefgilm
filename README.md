@@ -47,7 +47,8 @@ We welcome contributions! If you want to help out you have many options:
 
 ---
 ##Issues
-If you find a bug or have a suggestion, please create a new issue and we will look into it. Thank You. [Create a new issue](https://github.com/enilsen16/Eefgilm/issues/new)
+If you find a bug or have a suggestion, please create a new issue and we will look into it. Thank You. 
+[Create a new issue](https://github.com/enilsen16/Eefgilm/issues/new)
 
 ---
 ##Contact
