@@ -29,7 +29,7 @@ and then run
 
 A gif of 2 versions of Gemfile i.e before using the gem and after using the gem.
 
-![Banner](http://i1248.photobucket.com/albums/hh483/jainrishi15/before-after_zps2fd28e11.gif)
+![Banner](http://i1248.photobucket.com/albums/hh483/jainrishi15/before-after-1_zps1b477ded.gif)
 
 ---
 ## Usage
