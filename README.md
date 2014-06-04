@@ -4,8 +4,6 @@
 #Eefgilm: A gem for cleaning up your Gemfile
 
 #Description:
-**Important, currently does not support comments inside group blocks. If you have groups they will be included in the revised gemfile!**
-
 This gem automatically modifies a ruby gemfile to make them a little easier to read, it does this by alphabetizing the gems, removing all comments, and removing all whitespace including leading and trailing.
 
 ---
