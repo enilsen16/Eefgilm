@@ -56,17 +56,12 @@ If you find a bug or have a suggestion, please create a new issue and we will lo
 [Create a new issue](https://github.com/enilsen16/Eefgilm/issues/new)
 
 ---
-##Contact
-
-
----
-
 ##Thanks
 The following people have helped with development or project design in one form or another:
-[Steve Buckley](https://github.com/buckleys78)
-[Brook Riggio](https://github.com/brookr)
-[Cheri](https://github.com/cherimarie)
-[David](https://github.com/dbalatero)
+[Steve Buckley](https://github.com/buckleys78)<br>
+[Brook Riggio](https://github.com/brookr)<br>
+[Cheri](https://github.com/cherimarie)<br>
+[David](https://github.com/dbalatero)<br>
 
 ---
 ##License
