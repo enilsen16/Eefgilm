@@ -1,6 +1,6 @@
 module Eefgilm
   class Gemfile
-    attr_accessor :path, :source, :groups
+    attr_accessor :path, :source, :groups, :rubyversion
 
     def initialize(path = ".", options = {})
       @path  = path
@@ -35,6 +35,7 @@ module Eefgilm
 
       file_lines.each do |line|
         self.source = line if line.match(/^source/)
+        self.rubyversion = line if line.match(/^ruby/)
 
         if line.match(/^\s*group/)
           group_block = line.match(/^group (:.*)[,|\s]/)[1]
@@ -71,6 +72,7 @@ module Eefgilm
     def recreate_file
       output = File.open( "#{@path}/Gemfile", "w+" )
       output.puts @source
+      output.puts @rubyversion
       output.puts
 
       @groups.each do |group, gems|

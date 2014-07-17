@@ -38,6 +38,7 @@ gem 'spring'
 # Use debugger
 # gem 'debugger'
 
+ruby "2.0.0"
 
 group :test do
   gem "minitest-rails-capybara"
@@ -51,7 +52,3 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-
-
-
-

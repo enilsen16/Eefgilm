@@ -32,9 +32,10 @@ describe "Gemfile" do
       @worker.groups[:all].must_equal @worker.groups[:all].sort
     end
 
-    # it "should alphabetize gems within a group" do
-
-    # end
+    it "should keep the ruby version" do
+      @worker.clean!
+      @worker.rubyversion.must_include 'ruby "2.0.0"'
+    end
 
   end
 end

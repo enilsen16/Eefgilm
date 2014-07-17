@@ -2,6 +2,3 @@
 require 'eefgilm'
 gemfile = Eefgilm::Gemfile.new
 gemfile.clean!
-
-
-
