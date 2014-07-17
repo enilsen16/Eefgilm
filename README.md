@@ -4,10 +4,25 @@
 #Eefgilm: A gem for cleaning up your Gemfile
 
 #Description:
-**Important, currently does not support group blocks. If you have groups they will not included in the revised gemfile!**
 
 This gem automatically modifies a ruby gemfile to make them a little easier to read, it does this by alphabetizing the gems, removing all comments, and removing all whitespace including leading and trailing.
 
+These Gemfile best practices are all based on the [blog post](http://mcdowall.info/posts/gemfile-best-practices-and-discourse/) written by John McDowall.
+
+  ###These best practices are:
+    Consistent use of Ruby hash syntax. Use either the old hashrocket or the new Ruby 1.9 syntax, but not both.
+    Consistent use of a single quoted delimiter. Use either apostrophes or quotation marks, but not both.
+    No commented Gem references. If it’s commented out, it shouldn’t be there.
+    Comments relating to a Gem are on the same line as the gem statement, not above.
+    Group gems that are sourced from Git repos at the top. Chances are they are referencing pre-versions that will become general release and you can change the reference to be part of the General project group later.
+    Group gems that are sourced from a project path after Git repo sourced Gems. These are probably gems that you might make public and thus reference in the general project gem group later.
+    Group all of the General project gems together (consider using the :default group).
+    Group all of the Production project gems together after the General gems.
+    Group all of the Asset gems after the Production group.
+    Group all of the Test related gems after the Asset gems.
+    Group all of the Development related gems after the Test gems.
+    Within all Gem groups, sort the references by Alphabetical order.
+    When adding new gems, maintain the alphabetical ordering within the groups.
 ---
 
 ## Installation
@@ -25,6 +40,14 @@ and then run
      bundle install
 
 ---
+
+## Demo
+
+A gif of 2 versions of Gemfile i.e before using the gem and after using the gem.
+
+![Banner](http://i1248.photobucket.com/albums/hh483/jainrishi15/before-after-1_zps1b477ded.gif)
+---
+
 ## Usage
 
 Once you have installed eefgilm on your system or in a project directory its quite simple to use. In the directory who's gemfile you would like to modify run:
@@ -47,12 +70,8 @@ We welcome contributions! If you want to help out you have many options:
 
 ---
 ##Issues
-If you find a bug or have a suggestion, please create a new issue and we will look into it. Thank You. 
+If you find a bug or have a suggestion, please create a new issue and we will look into it. Thank You.
 [Create a new issue](https://github.com/enilsen16/Eefgilm/issues/new)
-
----
-##Contact
-
 
 ---
 
