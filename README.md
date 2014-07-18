@@ -46,8 +46,8 @@ and then run
 A gif of 2 versions of Gemfile i.e before using the gem and after using the gem.
 
 ![Banner](http://i1248.photobucket.com/albums/hh483/jainrishi15/before-after-1_zps1b477ded.gif)
----
 
+---
 ## Usage
 
 Once you have installed eefgilm on your system or in a project directory its quite simple to use. In the directory who's gemfile you would like to modify run:
@@ -76,11 +76,11 @@ If you find a bug or have a suggestion, please create a new issue and we will lo
 ---
 
 ##Thanks
-The following people have helped with development or project design in one form or another:  
-[Steve Buckley](https://github.com/buckleys78)  
-[Brook Riggio](https://github.com/brookr)  
-[Cheri](https://github.com/cherimarie)  
-[David](https://github.com/dbalatero)  
+The following people have helped with development or project design in one form or another:<br>
+[Steve Buckley](https://github.com/buckleys78)<br>
+[Brook Riggio](https://github.com/brookr)<br>
+[Cheri](https://github.com/cherimarie)<br>
+[David](https://github.com/dbalatero)<br>
 
 ---
 ##License
