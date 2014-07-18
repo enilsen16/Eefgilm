@@ -9,7 +9,8 @@ This gem automatically modifies a ruby gemfile to make them a little easier to r
 
 These Gemfile best practices are all based on the [blog post](http://mcdowall.info/posts/gemfile-best-practices-and-discourse/) written by John McDowall.
 
-  ###These best practices are:
+###These best practices are:
+  
     Consistent use of Ruby hash syntax. Use either the old hashrocket or the new Ruby 1.9 syntax, but not both.
     Consistent use of a single quoted delimiter. Use either apostrophes or quotation marks, but not both.
     No commented Gem references. If it’s commented out, it shouldn’t be there.
