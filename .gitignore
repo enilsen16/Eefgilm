@@ -21,3 +21,4 @@ tmp
 *.a
 mkmf.log
 test/data/sources/dummy/Gemfile
+.DS_Store
