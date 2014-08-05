@@ -71,8 +71,7 @@ module Eefgilm
 
     def recreate_file
       output = File.open( "#{@path}/Gemfile", "w+" )
-      output.puts @source
-      output.puts @rubyversion
+      output.puts [@source, @rubyversion].compact
       output.puts
 
       @groups.each do |group, gems|
