@@ -5,9 +5,9 @@
 
 #Description:
 
-This gem automatically modifies a ruby gemfile to make them a little easier to read, it does this by alphabetizing the gems, removing all comments, and removing all whitespace including leading and trailing.
+Eefgilm automatically modifies a ruby gemfile to make them a little easier to read, it does this by alphabetizing the gems, removing all comments, and removing all whitespace including leading and trailing.
 
-These Gemfile best practices are all based on the [blog post](http://mcdowall.info/posts/gemfile-best-practices-and-discourse/) written by John McDowall.
+These Gemfile best practices are all loosely based on a [blog post](http://mcdowall.info/posts/gemfile-best-practices-and-discourse/) written by John McDowall.
 
 ###These best practices are:
   
@@ -27,8 +27,7 @@ These Gemfile best practices are all based on the [blog post](http://mcdowall.in
 ---
 
 ## Installation
-The simplest way to install Eefgilm is to
-Run this command:
+The simplest way to install Eefgilm is to run this command:
 
      gem install eefgilm
 
