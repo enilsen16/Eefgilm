@@ -52,7 +52,7 @@ A gif of 2 versions of Gemfile i.e before using the gem and after using the gem.
 
 Once you have installed eefgilm on your system or in a project directory its quite simple to use. In the directory who's gemfile you would like to modify run:
 
-    eefglim
+    eefgilm
 
 Currently it will not ask you for any confirmation before making modifications, nor will it create a backup so please be careful when using eefgilm. It may be a good idea to backup your gemfile beforehand hand this can be done with:
 
