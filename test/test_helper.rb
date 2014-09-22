@@ -1,2 +1,2 @@
-require "minitest/autorun"
-require "eefgilm"
+require 'minitest/autorun'
+require 'eefgilm'
