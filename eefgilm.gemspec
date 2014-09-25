@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["enilsen16@live.com", "lindsay_marco@hotmail.com"]
   spec.summary       = %q{A gem to keep your Gemfile in best practice .}
   spec.description   = %q{Eefgilm is a gem that is written to help keep your gemfile in order. It will alphabetize your gems, remove comments, and remove unnecessary whitespace.  }
-  spec.homepage      = "https://github.com/enilsen16/eefgilm"
+  spec.homepage      = "http://enilsen16.github.io/Eefgilm/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
