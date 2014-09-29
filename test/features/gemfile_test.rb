@@ -40,6 +40,11 @@ describe "Gemfile" do
       @worker.rubyversion.must_include 'ruby "2.0.0"'
     end
 
+    it do
+      @worker.clean!
+      @worker.source.must_include 'https://rubygems.org'
+    end
+
     it "without a specified ruby version, it should not have an extra line" do
       regex = /^[\s]*$\n/
       count = 0

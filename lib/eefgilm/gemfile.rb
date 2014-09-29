@@ -35,6 +35,11 @@ module Eefgilm
 
       file_lines.each do |line|
         self.source = line if line.match(/^source/)
+
+        if self.source == "source 'http://rubygems.org'\n"
+          self.source = "source 'https://rubygems.org'\n"
+        end
+
         self.rubyversion = line if line.match(/^ruby/)
 
         if line.match(/^\s*group/)
