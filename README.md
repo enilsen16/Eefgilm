@@ -51,6 +51,15 @@ Currently it will not ask you for any confirmation before making modifications, 
      cp Gemfile Gemfilebackup
 
 ---
+
+## Demo
+
+A gif showing a gemfile before and after running Eefgilm.
+
+![Banner](http://zippy.gfycat.com/DeliriousInsidiousHumpbackwhale.gif)
+
+---
+
 ## Contributing
 We welcome contributions! If you want to help out you have many options:
 
