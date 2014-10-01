@@ -10,7 +10,7 @@ Eefgilm automatically modifies a ruby gemfile to make them a little easier to re
 These Gemfile best practices are all loosely based on a [blog post](http://mcdowall.info/posts/gemfile-best-practices-and-discourse/) written by John McDowall.
 
 ###These best practices are:
-  
+
 - Consistent use of Ruby hash syntax. Use either the old hashrocket or the new Ruby 1.9 syntax, but not both.
 - Consistent use of a single quoted delimiter. Use either apostrophes or quotation marks, but not both.
 - No commented Gem references. If it’s commented out, it shouldn’t be there.
@@ -45,7 +45,7 @@ and then run
 
 A gif of 2 versions of Gemfile i.e before using the gem and after using the gem.
 
-![Banner](http://i1248.photobucket.com/albums/hh483/jainrishi15/before-after-1_zps1b477ded.gif)
+![Banner](http://zippy.gfycat.com/DeliriousInsidiousHumpbackwhale.gif)
 
 ---
 ## Usage
