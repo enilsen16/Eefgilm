@@ -2,13 +2,13 @@ module Eefgilm
   class Gemfile
     attr_accessor :path, :source, :groups, :rubyversion
 
-    def initialize(path = ".", options = {})
-      @path  = path
-      @groups ={}
+    def initialize(path = '.', options = {})
+      @path = path
+      @groups = {}
       @options = {
-        :alphabetize => true,
-        :delete_whitespace => true,
-        :delete_comments => true
+        alphabetize: true,
+        delete_whitespace: true,
+        delete_comments: true
       }.merge(options)
     end
 
@@ -29,14 +29,14 @@ module Eefgilm
     private
 
     def extract_to_array_of_lines
-      gemfile = File.open("#{@path}/Gemfile", "r+")
+      gemfile = File.open("#{@path}/Gemfile", 'r+')
       group_block = :all
       file_lines = gemfile.readlines
 
       file_lines.each do |line|
         self.source = line if line.match(/^source/)
 
-        if self.source == "source 'http://rubygems.org'\n"
+        if source == "source 'http://rubygems.org'\n"
           self.source = "source 'https://rubygems.org'\n"
         end
 
@@ -49,10 +49,10 @@ module Eefgilm
         end
 
         if line.match(/^\s*gem/)
-          if self.groups[group_block].nil?
-            self.groups[group_block] = [line]
+          if groups[group_block].nil?
+            groups[group_block] = [line]
           else
-            self.groups[group_block] << line
+            groups[group_block] << line
           end
         end
       end
@@ -61,7 +61,7 @@ module Eefgilm
     def change_double_qoutes_to_single
       @groups.each do |group, gems|
         @groups[group] = gems.map do |g|
-          g.gsub('"',"'")
+          g.tr("\"", "'")
         end
       end
     end
@@ -69,13 +69,13 @@ module Eefgilm
     def delete_comments!
       @groups.each do |group, gems|
         @groups[group] = gems.map do |g|
-          g.gsub(/#(.*)$/, "")
+          g.gsub(/#(.*)$/, '')
         end
       end
     end
 
     def recreate_file
-      output = File.open( "#{@path}/Gemfile", "w+" )
+      output = File.open("#{@path}/Gemfile", 'w+')
       output.puts [@source, @rubyversion].compact
       output.puts
 
@@ -91,7 +91,7 @@ module Eefgilm
           gems.each do |g|
             output.puts "  #{g}"
           end
-          output.puts "end"
+          output.puts 'end'
         end
       end
 
@@ -107,7 +107,7 @@ module Eefgilm
     def delete_whitespace!
       @groups.each do |group, gems|
         @groups[group] = gems.map do |g|
-          g.gsub(/(?<=^|\[)\s+|\s+(?=$|\])|(?<=\s)\s+/, "")
+          g.gsub(/(?<=^|\[)\s+|\s+(?=$|\])|(?<=\s)\s+/, '')
         end
       end
     end
